@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-const HeadDocument = ({ title = "Stylewise" }) => {
+const HeadDocument = ({ title = "Mk-Buying" }) => {
   return (
     <Head>
       <title>{title}</title>

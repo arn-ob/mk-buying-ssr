@@ -90,7 +90,7 @@ const Details = ({ product, data: session }) => {
   const { image, name, description, price, colors, sizes } = product
   return (
     <>
-      <HeadDocument title={`Stylewise | ${name}`} />
+      <HeadDocument title={`Mk-Buying | ${name}`} />
       <Promo />
       <Navbar quantity={cartQty} />
       <MainLayout>

@@ -48,7 +48,7 @@ const Index = ({ trending, categories, data: session }) => {
 
   return (
     <>
-      <HeadDocument title="Stylewise" />
+      <HeadDocument title="Mk-Buying" />
       <header className="h-screen flex flex-col isolate">
         <Promo />
         <Navbar quantity={cartQty} />

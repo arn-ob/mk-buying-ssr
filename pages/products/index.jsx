@@ -80,7 +80,7 @@ const Products = ({ products, categories, data: session }) => {
 
   return (
     <>
-      <HeadDocument title="Stylewise | Products" />
+      <HeadDocument title="Mk-Buying | Products" />
       <Promo />
       <Navbar quantity={cartQty} />
       <MainLayout>

@@ -70,7 +70,7 @@ export default function Index({ data: session }) {
 
   return (
     <>
-      <HeadDocument title="Stylewise | Cart" />
+      <HeadDocument title="Mk-Buying | Cart" />
       <Promo />
       <Navbar quantity={cartQty} />
       <MainLayout>

@@ -43,7 +43,7 @@ export default function SignIn() {
 
   return (
     <>
-      <HeadDocument title="Stylewise | Sign in" />
+      <HeadDocument title="Mk-Buying | Sign in" />
       <SignLayout type="signin">
         <Toaster />
         <form

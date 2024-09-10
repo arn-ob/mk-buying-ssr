@@ -39,7 +39,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="https://github.com/loydcose/stylewise.git">
+                <Link href="/">
                   <AiFillGithub className="text-2xl hover:text-violet-600 transition-colors" />
                 </Link>
               </li>
@@ -150,7 +150,7 @@ const Footer = () => {
 
         <div className="border-t border-t-slate-600 pt-8 mt-12">
           <p className="text-center text-gray-400 text-sm">
-            Copyright @2022 stylewise. All rights reserved.
+            Copyright @2022 Mk-Buying. All rights reserved.
           </p>
         </div>
       </div>

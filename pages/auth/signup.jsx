@@ -38,7 +38,7 @@ export default function SignUp() {
 
   return (
     <>
-      <HeadDocument title="Stylewise | Sign up" />
+      <HeadDocument title="Mk-Buying | Sign up" />
       <SignLayout type="signup">
         <Toaster />
         <form
