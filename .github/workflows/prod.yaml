@@ -1,0 +1,46 @@
+name: Deploy Qus-Ans
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  Deploy:
+    name: Qus-Ans Frontend Deploy Process
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      - id: checkout
+        name: Checkout Action
+        uses: actions/checkout@v3
+      
+      - id: vars
+        name: Get brandh tag
+        shell: bash
+        run: |
+          echo "::set-output name=tag::${GITHUB_REF#refs/heads/}-$(git rev-parse --short HEAD)"
+        
+      - id: 'auth'
+        name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.GIT_USERNAME }}
+          password: ${{ secrets.GIT_PASSWORD }}
+      
+      - id: 'build_and_push'
+        name: Build and push image to Docker Hub
+        run: |
+          docker build . -t arnobdev/mk-buying-ssr:${{ steps.vars.outputs.tag }}
+          docker push arnobdev/mk-buying-ssr:${{ steps.vars.outputs.tag }}
+      
+      - id: 'image_to_do_kubectl'
+        name: Push the build image to the DO kubectl
+        uses: arn-ob/do-kubectl-action@main
+        with:
+          do_access_token: ${{ secrets.DO_ACCESS_TOKEN }}
+          do_cluster_certificate: ${{ secrets.DO_CLUSTER_CERTIFICATE }}
+          do_deployment_name: mk-buying-ssr-app
+          do_container_name: mk-buying-ssr-app
+          do_image_tag: arnobdev/mk-buying-ssr:${{ steps.vars.outputs.tag }}
