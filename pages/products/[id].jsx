@@ -36,6 +36,9 @@ export async function getServerSideProps({ req, res, params }) {
 }
 
 const Details = ({ product, data: session }) => {
+  console.log({
+    product
+  })
   const router = useRouter()
   const { register, handleSubmit } = useForm()
   const [showSizeChart, setShowSizeChart] = useState(false)
@@ -136,7 +139,7 @@ const Details = ({ product, data: session }) => {
                 {name}
               </h2>
               <span className="block mb-4 font-bold text-gray-700">
-                ${price}
+                ৳{price}
               </span>
               <p className="mb-2 md:mb-8 text-gray-600">{description}</p>
               <p className="mb-2 text-sm text-gray-600">Color</p>

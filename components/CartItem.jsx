@@ -67,7 +67,7 @@ const CartItem = ({
         <p className="text-gray-500 text-sm">{uppercase(color)}</p>
         <p className="mb-6 text-gray-500 text-sm">{uppercase(size)}</p>
         <div className="flex items-center justify-between">
-          <span className="font-bold text-gray-800">${price}</span>
+          <span className="font-bold text-gray-800">৳{price}</span>
           <div className="flex gap-3 py-2 px-4 rounded border border-gray-300">
             <button type="button" onClick={() => handleQuantity("decrement")}>
               -

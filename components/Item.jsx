@@ -8,7 +8,7 @@ const Item = ({ _id, image, name, price }) => {
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
       <p className="text-gray-600 text-sm md:text-base">{name}</p>
-      <span className="block font-semibold">${price}</span>
+      <span className="block font-semibold">৳{price}</span>
     </Link>
   )
 }
