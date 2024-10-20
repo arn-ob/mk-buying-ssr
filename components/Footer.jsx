@@ -52,7 +52,7 @@ const Footer = () => {
               <ul>
                 <li>
                   <Link
-                    href="/"
+                    href="/about"
                     className="text-gray-400 hover:text-violet-600"
                   >
                     About
